@@ -77,8 +77,8 @@ const config = {
     publisherName: [
       'Sensotrend Oy'
     ],
-    certificateSubjectName: "CN=Sensotrend Oy, O=Sensotrend Oy, L=Tampere, C=FI, SERIALNUMBER=2606155-7, OID.1.3.6.1.4.1.311.60.2.1.3=FI, OID.2.5.4.15=Private Organization",
-    certificateSha1: "EFADADF315F82D5DF7D6F6ABCAB864E5863E19BD",
+    /* certificateSubjectName: "CN=Sensotrend Oy, O=Sensotrend Oy, L=Tampere, C=FI, SERIALNUMBER=2606155-7, OID.1.3.6.1.4.1.311.60.2.1.3=FI, OID.2.5.4.15=Private Organization",
+    certificateSha1: "EFADADF315F82D5DF7D6F6ABCAB864E5863E19BD", */
     rfc3161TimeStampServer: 'http://timestamp.digicert.com'
   },
   mac: {
