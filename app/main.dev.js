@@ -149,7 +149,10 @@ function createWindow() {
     show: false,
     width: 663,
     height: 769,
-    resizable: resizable,
+    fullscreen: true,
+    kiosk:true,
+    frame: false,
+    autoHideMenuBar: true,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false, // so that we can access process from app.html

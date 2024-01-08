@@ -114,7 +114,7 @@ export const Login = () => {
           />
         </div>
         <div className={styles.actions}>
-          <div>
+          {/* <div>
             <div className={styles.remember}>
               <input
                 type="checkbox"
@@ -125,7 +125,7 @@ export const Login = () => {
               <label htmlFor="remember">{i18n.t('Remember me')}</label>
             </div>
             <div className={styles.forgot}>{renderForgotPasswordLink()}</div>
-          </div>
+          </div> */}
           <div>{renderButton()}</div>
         </div>
         <div className={styles.error}>{renderError()}</div>

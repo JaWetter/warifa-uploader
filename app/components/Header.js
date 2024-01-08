@@ -103,10 +103,10 @@ export class Header extends Component {
 
       return (
         <div className={styles.header}>
-          <div className={styles.signup}>
+         {/*  <div className={styles.signup}>
             <a className={styles.signupLink} href={signupHref} target="_blank">
               <i className={styles.signupIcon}> {i18n.t('Sign up')}</i></a>
-          </div>
+          </div> */}
           <div className={styles.logoWrapper}>
             <img className={styles.logo} src={logo} />
           </div>
