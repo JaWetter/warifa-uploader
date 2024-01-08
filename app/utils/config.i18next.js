@@ -9,9 +9,9 @@ let i18nextOptions = module.exports = {
   interpolation: {
     escapeValue: false
   },
-  lng: 'en',
+  lng: 'fi',
   saveMissing: process.env.NODE_ENV !== 'production',
-  fallbackLng: 'en',
+  fallbackLng: 'fi',
   returnEmptyString: true,
   supportedLngs: ['de', 'en', 'es', 'fi', 'fr', 'it', 'no', 'sv'],
   keySeparator: false,
