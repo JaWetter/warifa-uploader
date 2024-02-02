@@ -86,10 +86,10 @@ export default class Footer extends Component {
             <a className={styles.footerLink} href="#" onClick={eulaClick}>{i18n.t('Terms of Use')}</a>
           </div>
           <div className={styles.el3}>
-            <a className={styles.footerLink} href="#" onClick={finnishClick}>Suomi</a>
+            <a className={i18n.language === 'fi' ? styles.activeLng : styles.inactiveLng} href="#" onClick={finnishClick}>🇫🇮</a>
           </div>
           <div className={styles.el3}>
-            <a className={styles.footerLink} href="#" onClick={swedishClick}>Sverige</a>
+            <a className={i18n.language === 'sv' ? styles.activeLng : styles.inactiveLng} href="#" onClick={swedishClick}>🇸🇪</a>
           </div>
           {/*
           <div className={styles.jdrfContainer}>

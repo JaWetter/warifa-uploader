@@ -1,0 +1,17 @@
+{
+  "Plug cable into meter and then connect cable to computer": "Plug cable into meter and then connect cable to computer",
+  "For uploading instructions,": "For uploading instructions,",
+  "visit our support site": "visit our support site",
+  "Hold Bluetooth switch on meter until Bluetooth indicator starts to flash": "Hold Bluetooth switch on meter until Bluetooth indicator starts to flash",
+  "Make sure the meter is switched off and plug in cable": "Make sure the meter is switched off and plug in cable",
+  "Nexus and HCT: Plug in meter with mini-USB cable": "Nexus and HCT: Plug in meter with mini-USB cable",
+  "Nexus Mini Ultra & Go: Plug in meter with strip port cable": "Nexus Mini Ultra & Go: Plug in meter with strip port cable",
+  "Make sure meter is switched off before plugging in cable": "Make sure meter is switched off before plugging in cable",
+  "True Metrix, True Metrix Pro & True Metrix Air: Place meter in cradle • True Metrix Go: Plug in meter with micro-USB cable": "True Metrix, True Metrix Pro & True Metrix Air: Place meter in cradle • True Metrix Go: Plug in meter with micro-USB cable",
+  "Last upload": "Last upload",
+  "Newest version: {{newVersion}} - released {{newDate}}": "Newest version: {{newVersion}} - released {{newDate}}",
+  "Your version: {{currentVersion}} - installed {{currentDate}}": "Your version: {{currentVersion}} - installed {{currentDate}}",
+  "See what's new with Tidepool Uploader": "See what's new with Tidepool Uploader",
+  "You can continue to use your current version,": "You can continue to use your current version,",
+  "but we recommend updating as soon as possible.": "but we recommend updating as soon as possible."
+}

@@ -19,39 +19,39 @@ const LICENSE = 'LICENSE';
 //Closing the about page using'ESC' key
 let _isEscDown = false;
 function isEsc(event) {
-  return event.code === "Escape" && !(event.isComposing || event.altKey || event.ctrlKey || event.shiftKey);
+  return event.code === 'Escape' && !(event.isComposing || event.altKey || event.ctrlKey || event.shiftKey);
 }
 document.onkeydown = function (event) {
   _isEscDown = isEsc(event);
-}
+};
 document.onkeyup = function (event) {
   if (_isEscDown && isEsc(event)) {
     window.close();
   } else {
     _isEscDown = false;
   }
-}
+};
 //parsing the package.json file
 const pkg = JSON.parse((fs.readFileSync(PKG)));
 
 
 function toggleLicense() {
-  const license = document.querySelector("#license");
-  const main = document.querySelector("#main");
-  if (license.classList.contains("top")) {
-    license.classList.remove("top");
-    license.querySelector("button").textContent = i18n.t('Show license');
-    license.setAttribute("aria-hidden", "true");
-    main.setAttribute("aria-hidden", "false");
+  const license = document.querySelector('#license');
+  const main = document.querySelector('#main');
+  if (license.classList.contains('top')) {
+    license.classList.remove('top');
+    license.querySelector('button').textContent = i18n.t('Show license');
+    license.setAttribute('aria-hidden', 'true');
+    main.setAttribute('aria-hidden', 'false');
   } else {
-    license.classList.add("top");
-    license.querySelector("button").textContent = i18n.t('Hide license');
-    license.setAttribute("aria-hidden", "false");
-    main.setAttribute("aria-hidden", "true");
+    license.classList.add('top');
+    license.querySelector('button').textContent = i18n.t('Hide license');
+    license.setAttribute('aria-hidden', 'false');
+    main.setAttribute('aria-hidden', 'true');
   }
 }
 
-const licenseFile = fs.readFileSync(LICENSE).toString()
+const licenseFile = fs.readFileSync(LICENSE).toString();
 pkg['licenseFile'] = licenseFile;
 
 const copyrights = [];
