@@ -19,6 +19,7 @@ import PropTypes from 'prop-types';
 
 import React, { Component } from 'react';
 import { BrowserWindow, shell } from 'electron';
+import path from 'path';
 
 import styles from '../../styles/components/Footer.module.less';
 import logo from '../../images/JDRF_Reverse_Logo x2.png';
@@ -28,7 +29,53 @@ const remote = require('@electron/remote');
 const { getCurrentWindow } = remote;
 const i18n = remote.getGlobal( 'i18n' );
 
+
+let aboutWindow = null;
+function aboutDialog() {
+  if (aboutWindow !== null) {
+    aboutWindow.show();
+    return;
+  }
+
+  aboutWindow = new remote.BrowserWindow({
+    width: 600,
+    height: 600,
+    minWidth: 400,
+    minHeight: 400,
+    useContentSize: true,
+    center: true,
+    titleBarStyle: 'hidden-inset',
+    webPreferences: {
+        nodeIntegration: true,
+        contextIsolation: false,
+        enableRemoteModule: true,
+        webSecurity: false,
+    },
+    skipTaskbar: true,
+    // devTools: false,
+    // modal: true,
+    show: false
+  });
+  aboutWindow.loadURL('file://'+ path.join(__dirname + '/../about.html')).catch((reason) => {
+    console.log(reason);
+  });
+  aboutWindow.once('ready-to-show', () => {
+    aboutWindow.show();
+  });
+  aboutWindow.once('closed', () => {
+    aboutWindow = null;
+  });
+  aboutWindow.webContents.on('will-navigate', (e, url) => {
+    e.preventDefault();
+    shell.openExternal(url).catch((reason) => {
+      console.log('Could not open external: ' + reason);
+    });
+  });
+  aboutWindow.setMenu(null);
+}
+
 function instructionClick() {
+  console.log(`${__dirname}/../about.html`);
   const win = new remote.BrowserWindow({ width: 800, height: 600, frame:false, titleBarStyle: 'hidden', titleBarOverlay: true });
   win.loadURL('https://www.sensotrend.fi/connect/instructions/uploader');
 }
@@ -84,6 +131,9 @@ export default class Footer extends Component {
           </div>
           <div className={styles.el3}>
             <a className={styles.footerLink} href="#" onClick={eulaClick}>{i18n.t('Terms of Use')}</a>
+          </div>
+          <div className={styles.el3}>
+            <a className={styles.footerLink} href="#" onClick={aboutDialog}>{i18n.t('About')}</a>
           </div>
           <div className={styles.el3}>
             <a className={i18n.language === 'fi' ? styles.activeLng : styles.inactiveLng} href="#" onClick={finnishClick}>🇫🇮</a>
