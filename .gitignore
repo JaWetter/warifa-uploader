@@ -49,3 +49,6 @@ _book/
 web/
 
 \.vscode/
+app/about-en.html
+app/about-fi.html
+app/about-sv.html

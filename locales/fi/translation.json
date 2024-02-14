@@ -270,5 +270,6 @@
   "Uploading Libre 2 data?": "Yritätkö lähettää Libre 2:n tietoja?",
   "Please set your LibreView date format to Year-Month-Day and export the CSV again": "Aseta LibreViewn asetuksista päivämäärä muotoon vuosi-kuukausi-päivä ja lataa CSV uudestaan",
   "Choose File": "Valitse tiedosto",
-  "No file chosen": "Tiedostoa ei ole valittu"
+  "No file chosen": "Tiedostoa ei ole valittu",
+  "Warifa Uploader is a class I medical device.": "WARIFA Uploader on luokan I lääkinnällinen laite."
 }

@@ -3,8 +3,8 @@ import React, { Fragment } from 'react';
 import { render } from 'react-dom';
 import BuildTime from './BuildTime';
 
-import { remote } from 'electron';
-const i18n = remote.getGlobal( 'i18n' );
+import { remote } from '@electron/remote';
+const i18n = require('@electron/remote').getGlobal( 'i18n' );
 
 
 import config from '../lib/config';

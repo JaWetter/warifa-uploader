@@ -15,7 +15,6 @@ import i18nextBackend from 'i18next-fs-backend';
 import i18nextOptions from './utils/config.i18next';
 import path from 'path';
 import fs from 'fs';
-
 global.i18n = i18n;
 
 autoUpdater.logger = require('electron-log');

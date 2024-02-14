@@ -271,5 +271,6 @@
   "Uploading Libre 2 data?": "Laddar du upp Libre 2 data?",
   "Please set your LibreView date format to Year-Month-Day and export the CSV again": "Ställ in ditt LibreView-datumformat till År-månad-dag och exportera CSV-filen igen",
   "Choose File": "Välj Fil ",
-  "No file chosen": "fil inte vald"
+  "No file chosen": "fil inte vald",
+  "Warifa Uploader is a class I medical device.": "WARIFA Uploader är en medicinteknisk produkt av klass I."
 }

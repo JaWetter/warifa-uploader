@@ -30,13 +30,14 @@ const { getCurrentWindow } = remote;
 const i18n = remote.getGlobal( 'i18n' );
 
 
+
+
 let aboutWindow = null;
 function aboutDialog() {
   if (aboutWindow !== null) {
     aboutWindow.show();
     return;
   }
-
   aboutWindow = new remote.BrowserWindow({
     width: 600,
     height: 600,
@@ -46,17 +47,16 @@ function aboutDialog() {
     center: true,
     titleBarStyle: 'hidden-inset',
     webPreferences: {
-        nodeIntegration: true,
         contextIsolation: false,
         enableRemoteModule: true,
-        webSecurity: false,
     },
     skipTaskbar: true,
     // devTools: false,
     // modal: true,
     show: false
   });
-  aboutWindow.loadURL('file://'+ path.join(__dirname + '/../about.html')).catch((reason) => {
+  require('@electron/remote/main').enable(aboutWindow.webContents);
+  aboutWindow.loadFile(`../app/about-${i18n.language}.html`).catch((reason) => {
     console.log(reason);
   });
   aboutWindow.once('ready-to-show', () => {
